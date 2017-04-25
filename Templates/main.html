@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
   <html>
     <head>
 		<!--Etiquetas del tipo de alfabeto-->
@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<!--Links de materialize y el css/less-->
-		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 		<link href="../Documents/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 		<!--Etiquetas referetes al encabezado de la página-->
 		<title>Los Troyanos</title>
@@ -17,23 +17,38 @@
 		<!--Inicio del maquetado-->
 		<!--Dropdown-->
 		<ul id="Ingreso" class="dropdown-content">
-			<li><a href="#ModalIniciar"><i class="material-icons">vpn_key</i>Iniciar Sesión</a></li>
+			<div class="row">
+				<div class="col s12">
+				<li><a data-target="ModalIniciar"><i class="tiny material-icons">vpn_key</i>Iniciar Sesión</a></li>
+				</div>
+			</div>
 			<li class="divider"></li>
-			<li><a href="#ModalRegistrar"><i class="material-icons right">mode_edit</i>Registrarse</a></li>
+			<div class="row">
+				<div class="col s12">
+				<li><a href="#ModalRegistrar"><i class="tiny material-icons">mode_edit</i>Registrarse</a></li>
+				</div>
+			</div>
 		</ul>
 		<!--Barra de Navegación-->
-		<nav>
-			<div class="nav-wrapper">
+		<nav class="blue" role="navigation">
+			<div class="nav-wrapper container">
 				<a href="https://www.speciesplus.net/" class="brand-logo center">Animales de Oceanía</a>
-				<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a class="dropdown-button" href="#!" data-activates="Ingreso">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+				<ul class="left hide-on-med-and-down">
+					<li><a class="dropdown-button" href="#!" data-activates="Ingreso">¡Empieza ya!<i class="material-icons right">arrow_drop_down</i></a></li>
+				</ul>
+				<!--Pestañas en movil-->
+				<ul class="side-nav" id="Mobile">
+					<li><a class="dropdown-button" href="#!" data-activates="">¡Empieza ya!<i class="material-icons right">arrow_drop_down</i></a></li>					
+				</ul>
+				<a href="#" data-activates="Mobile" class="button-collapse"><i class="material-icons">menu</i></a> 
 			</div>
 		</nav>
 		<div class="container center-align">
 			<!--Fila 1-->
 			<div class="row">
 				<div class="col s12">
-					Holaaaaaa
+				jhghj
+				
 				</div>
 			</div>
 			<!--Fin fila 1-->
@@ -62,6 +77,6 @@
 		<!--Scrips que se necesitaran-->
 		<script type="text/javascript" src="../Documents/js/jquery-2.2.3.js"></script>
 		<script type="text/javascript" src="../Documents/js/materialize.js"></script>
-		<script type="text/javascript" src="../Documents/js/less.js"></script>
+		<!--<script type="text/javascript" src="../Documents/js/less.js"></script>-->
     </body>
   </html>
