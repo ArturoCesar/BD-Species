@@ -3,4 +3,5 @@ Desarrollo de un sistema en base a un archivo ccv escogido de la página "Specie
 Equipo: Los Troyanos
 Integrantes:
 - Martínez Martos Arturo Cesar
+- Beltrán Villanueva Ibzán
 - Anotense chavos :v
