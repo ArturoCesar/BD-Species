@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
   <html>
     <head>
 		<!--Etiquetas del tipo de alfabeto-->
@@ -8,27 +8,14 @@
 		<!--Links de materialize y el css/less-->
 		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 		<link href="../Documents/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="../Documents/css/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 		<!--Etiquetas referetes al encabezado de la página-->
 		<title>Los Troyanos</title>
 		<link rel="shortcut icon" href="../Sources/Troyanos casco.png" type="image/png"/>
 		<!--Opciones de icono "Troyanos casco.png","Troyanos.jpg","Troya 1.jpg","Oceania_fauna"-->
     </head>
-    <body>
+    <body class="white">
 		<!--Inicio del maquetado-->
-		<!--Dropdown-->
-		<ul id="Ingreso" class="dropdown-content">
-			<div class="row">
-				<div class="col s12">
-				<li><a data-target="ModalIniciar"><i class="tiny material-icons">vpn_key</i>Iniciar Sesión</a></li>
-				</div>
-			</div>
-			<li class="divider"></li>
-			<div class="row">
-				<div class="col s12">
-				<li><a href="#ModalRegistrar"><i class="tiny material-icons">mode_edit</i>Registrarse</a></li>
-				</div>
-			</div>
-		</ul>
 		<!--Barra de Navegación-->
 		<nav class="blue" role="navigation">
 			<div class="nav-wrapper container">
@@ -43,17 +30,48 @@
 				<a href="#" data-activates="Mobile" class="button-collapse"><i class="material-icons">menu</i></a> 
 			</div>
 		</nav>
+		<!--Dropdown de arriba-->
+		<ul id="Ingreso" class="dropdown-content">
+			<li><a data-target="ModalIniciar"><!--<i class="tiny material-icons">vpn_key</i>-->Iniciar Sesión</a></li>
+			<li class="divider"></li>
+			<li><a class="waves-effect waves-light" href="#ModalRegistrar"><!--<i class="tiny material-icons">mode_edit</i>-->Registrarse</a></li>
+		</ul>
+		<!--Un parallax-->
+		<div class="parallax-container">
+			<div class="parallax"><img src="../Sources/sydney2.jpg"></div>
+		</div>
+		<!--Cuerpo de la página-->
 		<div class="container center-align">
-			<!--Fila 1-->
+			<!--Introduccion-->
 			<div class="row">
 				<div class="col s12">
-				jhghj
-				
+					<h5>Bienvenido a troyanos.com, en esta página encontraras un sistema capaz de mostrarte 
+					los animales de oceanía, ¿Qué esperas para probarlo?
+					</h5>
+				</div>
+			</div>
+			<!--Un carusel-->
+			<div class="carousel">
+				<a class="carousel-item" href=""><img src="../Sources/Animal1.jpg" width="500" height="200"></a>
+				<a class="carousel-item" href=""><img src="../Sources/Animal2.jpg" width="500" height="200"></a>
+				<a class="carousel-item" href=""><img src="../Sources/Animal3.jfif" width="500" height="200"></a>
+				<a class="carousel-item" href=""><img src="../Sources/Animal4.jpg" width="500" height="200"></a>
+				<a class="carousel-item" href=""><img src="../Sources/Animal5.jpg" width="500" height="200"></a>
+			</div>
+			<!--Fila 1-->
+			<div class="row">
+				<div class="col s12 m4">
+					jhghj
+				</div>
+				<div class="col s12 m4">
+					jhghj
+				</div>
+				<div class="col s12 m4">
+					jhghj		
 				</div>
 			</div>
 			<!--Fin fila 1-->
 			<!--Modals-->
-			<!-- Modal Structure -->
 			<div id="ModalIniciar" class="modal">
 				<div class="modal-content">
 					<h4>Iniciar Sesion</h4>
@@ -77,6 +95,7 @@
 		<!--Scrips que se necesitaran-->
 		<script type="text/javascript" src="../Documents/js/jquery-2.2.3.js"></script>
 		<script type="text/javascript" src="../Documents/js/materialize.js"></script>
+		<script type="text/javascript" src="../Documents/js/main.js"></script>
 		<!--<script type="text/javascript" src="../Documents/js/less.js"></script>-->
     </body>
   </html>
