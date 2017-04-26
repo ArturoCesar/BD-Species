@@ -4,4 +4,5 @@ Equipo: Los Troyanos
 Integrantes:
 - Martínez Martos Arturo Cesar
 - Beltrán Villanueva Ibzán
+- Marquez Valdez Luis
 - Anotense chavos :v
