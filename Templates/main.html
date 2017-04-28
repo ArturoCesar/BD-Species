@@ -38,7 +38,7 @@
 		</ul>
 		<!--Un parallax-->
 		<div class="parallax-container">
-			<div class="parallax"><img src="../Sources/sydney5.jpg"></div>
+			<div class="parallax"><img src="../Sources/Puente.jpg"></div>
 		</div>
 		<!--Cuerpo de la página-->
 		<div class="container center-align">
@@ -62,7 +62,7 @@
 		</div>
 		<!--Otro parallax-->
 		<div class="parallax-container">
-			<div class="parallax"><img src="../Sources/sydney1.png"></div>
+			<div class="parallax"><img src="../Sources/isla.jpg"></div>
 		</div>
 		<div class="container center-align">
 		<br/>
@@ -96,14 +96,35 @@
 			</div>
 			<!--Fin fila-->
 			<!--Modals-->
+			<!--Iniciar sesión-->
 			<div id="ModalIniciar" class="modal">
+				<form class="col s12" method="POST" action="main.php">
 				<div class="modal-content">
 					<h4>Iniciar Sesion</h4>
-					<p>A bunch of text</p>
+					<!--Formularios para iniciar sesión-->
+					<div class="row">
+						<div class="row">
+						<!--NO_cuenta-->
+							<div class="input-field col s12">
+								<i class="material-icons prefix">account_circle</i>
+								<input id="cuenta" name="cuenta" type="tel" class="validate" data-length="10" pattern="">
+								<label for="cuenta" data-error="wrong" data-success="right">Número de cuenta</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<i class="material-icons prefix">phone</i>
+								<input id="contraseña" name="contra" type="password" class="validate" data-length="15" pattern="">
+								<label for="contraseña" data-error="wrong" data-success="right">Contraseña</label>
+							</div>
+						</div>
+					</div>
 				</div>
+				
 				<div class="modal-footer">
-				  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+				  <input type="submit" class="waves-effect waves-green btn-flat" value="Enviar"/>
 				</div>
+				</form>
 			</div>
 			<div id="ModalRegistrar" class="modal">
 				<div class="modal-content">
