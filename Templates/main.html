@@ -107,22 +107,22 @@
 						<!--NO_cuenta-->
 							<div class="input-field col s12">
 								<i class="material-icons prefix">account_circle</i>
-								<input id="cuenta" name="cuenta" type="tel" class="validate" data-length="10" pattern="">
-								<label for="cuenta" data-error="wrong" data-success="right">Número de cuenta</label>
+								<input id="cuenta" name="cuenta" type="text" class="validate tooltipped" data-length="9" pattern="^[0-9]{9}" data-position="bottom" data-delay="50" data-tooltip="Solo se admiten números, forzozamente 9">
+								<label for="cuenta" data-error="Checa tus datos" data-success="¡Bien!">Número de cuenta</label>
 							</div>
 						</div>
 						<div class="row">
 							<div class="input-field col s12">
-								<i class="material-icons prefix">phone</i>
-								<input id="contraseña" name="contra" type="password" class="validate" data-length="15" pattern="">
-								<label for="contraseña" data-error="wrong" data-success="right">Contraseña</label>
+								<i class="material-icons prefix">vpn_key</i>
+								<input id="contraseña" name="contra" type="password" class="validate tooltipped" data-length="15" pattern="^[a-zA-Z0-9_\.\-\@]{8,15}" data-position="bottom" data-delay="50" data-tooltip="Mínimo 8 caracteres, máx 15">
+								<label for="contraseña" data-error="Checa tus datos" data-success="¡Bien!">Contraseña</label>
 							</div>
 						</div>
 					</div>
 				</div>
 				
 				<div class="modal-footer">
-				  <input type="submit" class="waves-effect waves-green btn-flat" value="Enviar"/>
+				  <input id="entrar" type="submit" class="waves-effect waves-green btn-flat" value="Enviar"  onclick="valida_envia()" />
 				</div>
 				</form>
 			</div>
