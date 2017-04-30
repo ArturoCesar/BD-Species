@@ -21,4 +21,4 @@ Como instalar el sistema:
   8. Darle click a los servicios de Apache y Mysql "start"
   9. Hecho lo anterior prodeceremos a oprimir las teclas "Inicio" + "R"
   10. Se abrira una pequeña ventana, escribir "cmd" en ella y pulsar enter
-  11. 
+  11. Con esto se abrirá la consola de la PC, escribir lo siguiente: ""
