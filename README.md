@@ -9,7 +9,9 @@ Integrantes:
 - Marquez Valdez Luis
 
 Como instalar el sistema:
-  PREPARAR LOS ARCHIVOS
+
+PREPARAR LOS ARCHIVOS
+
   1. Descargar "XAMPP" desde https://www.apachefriends.org/es/index.html, será necesario para levantar los servicios requeridos al usar php y bases de datos
   2. Descargar los archivos de este repositorio 
   3. Una vez descargdos, mover el archivo .rar a la siguiente dirección: c:/xampp/htdocs/
@@ -18,6 +20,7 @@ Como instalar el sistema:
   6. Copiar el archivo a C:/xampp/mysql/bin
   
 LEVANTAR LOS SERVICIOS Y LA BASE DE DATOS
+
   7. Abrir el "Control Panel" de XAMMP
   8. Darle click a los servicios de Apache y Mysql "start"
   9. Hecho lo anterior prodeceremos a oprimir las teclas "Inicio" + "R"
@@ -27,10 +30,11 @@ LEVANTAR LOS SERVICIOS Y LA BASE DE DATOS
     - mysql -u root
     - CREATE DATABASE troyanos;
     - exit
-  13. Volvera a la carpeta raíz, escriba lo siguiente: "mysql -u root troyanos < base.sql", con esto quedará levantada la base de datos y   estará lista para usarse
+  13. Volvera a la carpeta raíz, escriba lo siguiente: "mysql -u root troyanos < base.sql", con esto quedará levantada la base de datos   y   estará lista para usarse
   14. Escribir "exit"
   
 USAR EL SISTEMA
+
   14. Entrar en C:/xampp/htdocs/BD-Species/Templates
   15. Abrir el archivo "main.html" en su navegador favorito
   16. Borrar toda la ruta anterior a BD-Species/Templates/main.html y reemplazarlo por "localhost"
