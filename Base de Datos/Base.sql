@@ -23,10 +23,10 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `usuarios` (
-  `usuario_id` int(9) NOT NULL,
+  `usuario_id` char(9) PRIMARY KEY NOT NULL,
   `usuario_nombre` varchar(15) NOT NULL,
   `usuario_permiso` int(1) NOT NULL,
-  `usuario_contraseña` varchar(15) NOT NULL,
+  `usuario_contra` varchar(15) NOT NULL,
   PRIMARY KEY (`usuario_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -37,7 +37,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (0,'Arturo Cesar',0,'holamundo'),(1,'Luis',0,'holamundo'),(2,'ibzi',0,'holamundo'),(3,'publico',1,'holamundo');
+INSERT INTO `usuarios` VALUES ("315115879",'Arturo Cesar',0,'holamundo'),("123456734",'Luis',0,'holamundo2'),("987654321",'ibzan',0,'holamundo3'),("123789456",'publico',1,'holamundo'),('123456789','margarito',1,'password');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
