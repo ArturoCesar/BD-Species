@@ -16,9 +16,24 @@ Como instalar el sistema:
   4. Descomprimir el archivo .rar
   5. Ubicar el archivo "base.sql" que esta en la carpeta "Bases de Datos" dentro de la carpeta que resulto descomprimida
   6. Copiar el archivo a C:/xampp/mysql/bin
+  
   LEVANTAR LOS SERVICIOS Y LA BASE DE DATOS
   7. Abrir el "Control Panel" de XAMMP
   8. Darle click a los servicios de Apache y Mysql "start"
   9. Hecho lo anterior prodeceremos a oprimir las teclas "Inicio" + "R"
   10. Se abrira una pequeña ventana, escribir "cmd" en ella y pulsar enter
-  11. Con esto se abrirá la consola de la PC, escribir lo siguiente: ""
+  11. Con esto se abrirá la consola de la PC, escribir lo siguiente: "cd c:/xampp/mysql/bin"
+  12. Ejecutar la siguiente lista de comandos :
+    - mysql -u root
+    - CREATE DATABASE troyanos;
+    - exit
+  13. Volvera a la carpeta raíz, escriba lo siguiente: "mysql -u root troyanos < base.sql", con esto quedará levantada la base de datos y   estará lista para usarse
+  14. Escribir "exit"
+  
+  USAR EL SISTEMA
+  14. Entrar en C:/xampp/htdocs/BD-Species/Templates
+  15. Abrir el archivo "main.html" en su navegador favorito
+  16. Borrar toda la ruta anterior a BD-Species/Templates/main.html y reemplazarlo por "localhost"
+  17. ¡Listo! Podra usar su sistema 
+    
+  
