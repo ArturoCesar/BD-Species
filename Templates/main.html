@@ -103,20 +103,19 @@
 					<h4>Iniciar Sesion</h4>
 					<!--Formularios para iniciar sesión-->
 					<div class="row">
-						<div class="row">
-						<!--NO_cuenta-->
-							<div class="input-field col s12">
-								<i class="material-icons prefix">account_circle</i>
-								<input id="cuenta" name="cuenta" type="text" class="validate tooltipped" data-length="9" required pattern="^[0-9]{9}" data-position="bottom" data-delay="50" data-tooltip="Solo se admiten números, forzozamente 9">
-								<label for="cuenta" data-error="Checa tus datos" data-success="¡Bien!">Número de cuenta</label>
-							</div>
+					<!--NO_cuenta-->
+						<div class="input-field col s12">
+							<i class="material-icons prefix">account_circle</i>
+							<input id="cuenta" name="cuenta" type="text" class="validate tooltipped" data-length="9" required pattern="^[0-9]{9}" data-position="bottom" data-delay="50" data-tooltip="Solo se admiten números, forzozamente 9">
+							<label for="cuenta" data-error="Checa tus datos" data-success="¡Bien!">Número de cuenta</label>
 						</div>
-						<div class="row">
-							<div class="input-field col s12">
-								<i class="material-icons prefix">vpn_key</i>
-								<input id="contraseña" name="contra" type="password" class="validate tooltipped" data-length="15" required pattern="{8,15}" data-position="bottom" data-delay="50" data-tooltip="Mínimo 8 caracteres, máx 15"><!--para el patern ^[a-z]A-Z0-9_\.\-\@{8,15}-->
-								<label for="contraseña" data-error="Checa tus datos" data-success="¡Bien!">Contraseña</label>
-							</div>
+					</div>
+					<!--Contraseña-->
+					<div class="row">
+						<div class="input-field col s12">
+							<i class="material-icons prefix">vpn_key</i>
+							<input id="contraseña" name="contra" type="password" class="validate tooltipped" data-length="15" required pattern="{8,15}" data-position="bottom" data-delay="50" data-tooltip="Mínimo 8 caracteres, máx 15"><!--para el patern ^[a-z]A-Z0-9_\.\-\@{8,15}-->
+							<label for="contraseña" data-error="Checa tus datos" data-success="¡Bien!">Contraseña</label>
 						</div>
 					</div>
 				</div>
@@ -126,13 +125,39 @@
 				</form>
 			</div>
 			<div id="ModalRegistrar" class="modal">
+				<form class="col s12" method="POST" action="../Templates/registro.php">
 				<div class="modal-content">
-					<h4>Registrarse</h4>
-					<p>A bunch of text</p>
+					<h4>Registro</h4>
+					<!--Formularios para iniciar sesión-->
+					<div class="row">
+						<!--No_cuenta-->
+						<div class="input-field col s12">
+							<i class="material-icons prefix">account_circle</i>
+							<input id="cuenta" name="cuentanueva" type="text" class="validate tooltipped" data-length="9" required pattern="^[0-9]{9}" data-position="bottom" data-delay="50" data-tooltip="Solo se admiten números, forzozamente 9">
+							<label for="cuenta" data-error="Checa tus datos" data-success="¡Bien!">Número de cuenta</label>
+						</div>
+					</div>
+					<!--Nombre-->
+					<div class="row">
+						<div class="input-field col s12">
+							<i class="material-icons prefix">assignment</i>
+							<input id="nombre" name="nombrenueva" type="text" class="validate tooltipped" data-length="15" required pattern="{8,15}" data-position="bottom" data-delay="50" data-tooltip="Mínimo 8 caracteres, máx 15"><!--para el patern ^[a-z]A-Z0-9_\.\-\@{8,15}-->
+							<label for="nombre" data-error="Checa tus datos" data-success="¡Bien!">Nombre</label>
+						</div>
+					</div>
+					<!--Contraseña-->
+					<div class="row">
+						<div class="input-field col s12">
+							<i class="material-icons prefix">vpn_key</i>
+							<input id="contraseña" name="contranueva" type="password" class="validate tooltipped" data-length="15" required pattern="{8,15}" data-position="bottom" data-delay="50" data-tooltip="Mínimo 8 caracteres, máx 15"><!--para el patern ^[a-z]A-Z0-9_\.\-\@{8,15}-->
+							<label for="contraseña" data-error="Checa tus datos" data-success="¡Bien!">Contraseña</label>
+						</div>
+					</div>
 				</div>
 				<div class="modal-footer">
-				  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+				  <input id="entrar" type="submit" class="waves-effect waves-green btn-flat" value="Enviar"  onclick="valida_envia()" />
 				</div>
+				</form>
 			</div>
 		</div>
 		<br/>
