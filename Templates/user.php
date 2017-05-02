@@ -7,6 +7,25 @@
 				header("Location: main.html");
 			}
 			else{
+				if (isset($_POST["consulta"])){
+					$conexion = mysqli_connect("localhost", "root", "", "troyanos");
+					if (mysqli_connect_errno($conexion)) {
+						echo "Fallo al conectar a MySQL: " . mysqli_connect_error();
+					}
+					// En caso que la conexion sea exitosa, se mete al programa
+					else{
+						echo "Conexión exitosa<br/><br/>";
+						/*$consulta=$_POST["consulta"];
+						$resultado = mysqli_query($conexion, "SELECT * FROM animal WHERE id_animal=".$consulta.";");
+						$fila= mysqli_fetch_assoc($resultado);
+							print_r ($fila);
+						*/
+						$consulta=$_POST["consulta"];
+						$resultado = mysqli_query($conexion, "SELECT * FROM specie WHERE Species1='".$consulta."\r';");
+						$fila= mysqli_fetch_assoc($resultado);
+						print_r ($fila);
+					}
+				}
 				echo "
 				<!DOCTYPE html>
 				<html>
@@ -40,7 +59,11 @@
 							<br/>
 							<div class='row'>
 								<div class='col l12'>
-									
+									<h1>CONSULTA DE ANIMALES</h1> 
+									<form method='POST' action=''> 
+										<input type= text name='consulta' placeholder= 'escribe el id'>
+										<input type='submit'>
+									</form> 
 								</div>
 							</div>
 						</div>
