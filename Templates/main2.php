@@ -221,13 +221,15 @@
 						</body>
 					</html>";
 				else {
-					SESSION_start();
-					$_SESSION["usuario_id"]=$cuenta;
-					//SESSION_destroy();
-					if ($consulta["usuario_permiso"]==0)
-						header("Location: ../Templates/admin.php");
-					else
-						header("Location: ../Templates/user.php");
+					session_start();
+					$_session["usuario_id"]=$cuenta;
+					echo "<br/>Contraseña Correcta<br/>";
+					if ($consulta["usuario_permiso"]==0){
+						echo "<br/>Administrador<br/>";
+					}
+					else {
+						header('Location: /repertoire/mapage.php');
+					}
 				}
 			}
 			//echo "Hubo un error: " . mysqli_error ( $mysqli );
