@@ -16,7 +16,7 @@ PREPARAR LOS ARCHIVOS
   2. Descargar los archivos de este repositorio 
   3. Una vez descargdos, mover el archivo .rar a la siguiente dirección: c:/xampp/htdocs/
   4. Descomprimir el archivo .rar
-  5. Ubicar el archivo "base.sql" que esta en la carpeta "Bases de Datos" dentro de la carpeta que resulto descomprimida
+  5. Ubicar el archivo "BaseDatos.sql" que esta en la carpeta "Bases de Datos" dentro de la carpeta que resulto descomprimida
   6. Copiar el archivo a C:/xampp/mysql/bin
   
 LEVANTAR LOS SERVICIOS Y LA BASE DE DATOS
@@ -30,7 +30,7 @@ LEVANTAR LOS SERVICIOS Y LA BASE DE DATOS
     - mysql -u root
     - CREATE DATABASE troyanos;
     - exit
-  13. Volvera a la carpeta raíz, escriba lo siguiente: "mysql -u root troyanos < base.sql", con esto quedará levantada la base de datos   y   estará lista para usarse
+  13. Volvera a la carpeta raíz, escriba lo siguiente: "mysql -u root troyanos < BaseDatos.sql", con esto quedará levantada la base de datos   y   estará lista para usarse
   14. Escribir "exit"
   
 USAR EL SISTEMA
