@@ -1,6 +1,6 @@
 <?php
 	SESSION_start();
-	if (isset($_SESSION['usuario_id'])){
+	if (isset($_SESSION['id'])){
 		echo "
 		<!DOCTYPE html>
 		<html>
@@ -22,6 +22,7 @@
 				<nav class='blue' role='navigation'>
 					<div class='nav-wrapper container'>
 						<a href='https://www.speciesplus.net/' class='brand-logo center'>Animales</a>
+						<a href='' class='left'>¡Hola! ".$_SESSION['nombre']."</a>
 					</div>
 				</nav>
 				<!--Cuerpo de la página-->
@@ -30,9 +31,7 @@
 					<br/>
 					<div class='row'>
 						<div class='col l12'>
-							<h5>Contraseña incorrecta, checa bien tus datos :)<br/>
-							<a href='../Templates/main.html'>Volver<a/></h5>
-							<img src='../Sources/Incognito.jpg' width='800' height='500'/>
+							
 						</div>
 					</div>
 				</div>
@@ -203,6 +202,6 @@
 				<script type='text/javascript' src='../Documents/js/main.js'></script>
 			</body>
 		</html>";
-		SESSION_start();
+		SESSION_destroy();
 	}
 ?>
