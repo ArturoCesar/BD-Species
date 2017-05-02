@@ -65,10 +65,35 @@ CREATE TABLE `LOCALIZACION` (
 `Distribution_Uncertain` varchar(50)
 );
 
-
-
-
-
+---------UNICA TABLA------------------
+CREATE TABLE `TODO` (
+	`id_animal` int NOT NULL PRIMARY KEY,
+	`kingdom` varchar(15) NOT NULL,
+	`phylum` varchar(15) NOT NULL,
+	`class1` varchar(15) NOT NULL,
+	`order1` varchar(15) NOT NULL,
+	`family` varchar(15) NOT NULL,
+	`genus` varchar(15) NOT NULL,
+	`species` varchar(15) NOT NULL,
+	`subspecies1` varchar(20),
+	`scientific_name` varchar(30) NOT NULL,
+	`Autor` varchar(30), 
+	`Rank1` varchar(15),
+	`Listing` varchar(10),
+	`Party` varchar(10),
+	`Listed_under` varchar(30),
+	`Full_note` varchar(50),
+	`#_Full_note` varchar(50),
+	`All_DistributionFullNames` varchar(50),
+	`All_DistributionISOCodes` varchar(50),
+	`NativeDistributionFullNames` varchar(50), 
+	`Introduced_Distribution` varchar(50),
+	`IntroducedX_Distribution` varchar(50),
+	`Reintroduced_Distribution` varchar(50), 
+	`Extinct_Distribution` varchar(50),
+	`ExtinctX_Distribution` varchar(50),
+	`Distribution_Uncertain` varchar(50)
+);
 
 
 
@@ -119,7 +144,7 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n' 
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE 'C:/xampp/htdocs/BD-Species-master/Base de Datos/TABLES/ANIMAL TABLES/CIENTIFIC_NAME TABLE.csv' INTO TABLE CIENTIFIC_NAME 
+LOAD DATA INFILE 'C:/xampp/htdocs/BD-Species-master/Base de Datos/TABLES/ANIMAL TABLES/CIENTIFIC_NAME.csv' INTO TABLE CIENTIFIC_NAME 
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"' 
 LINES TERMINATED BY '\n' 
