@@ -7,25 +7,6 @@
 				header("Location: main.html");
 			}
 			else{
-				if (isset($_POST["consulta"])){
-					$conexion = mysqli_connect("localhost", "root", "", "troyanos");
-					if (mysqli_connect_errno($conexion)) {
-						echo "Fallo al conectar a MySQL: " . mysqli_connect_error();
-					}
-					// En caso que la conexion sea exitosa, se mete al programa
-					else{
-						echo "Conexión exitosa<br/><br/>";
-						/*$consulta=$_POST["consulta"];
-						$resultado = mysqli_query($conexion, "SELECT * FROM animal WHERE id_animal=".$consulta.";");
-						$fila= mysqli_fetch_assoc($resultado);
-							print_r ($fila);
-						*/
-						$consulta=$_POST["consulta"];
-						$resultado = mysqli_query($conexion, "SELECT * FROM specie WHERE Species1='".$consulta."\r';");
-						$fila= mysqli_fetch_assoc($resultado);
-						print_r ($fila);
-					}
-				}
 				echo "
 				<!DOCTYPE html>
 				<html>
@@ -58,13 +39,77 @@
 						<!--Introduccion-->
 							<br/>
 							<div class='row'>
-								<div class='col l12'>
-									<h1>CONSULTA DE ANIMALES</h1> 
+								<h1>CONSULTA DE ANIMALES</h1> 
+								<div class='input-field col s12'>
 									<form method='POST' action=''> 
-										<input type= text name='consulta' placeholder= 'escribe el id'>
-										<input type='submit'>
+										<input id='autocompletar' class='autocomplete' type='text' name='consulta'>
+										<label for='autocompletar'>Escribe la especie</label>
+										<input type='submit' class='aves-effect waves-light btn' value='Consultar'>
 									</form> 
 								</div>
+							</div>
+							<div class='row'>
+								<div class='col l12'>";
+									if (isset($_POST["consulta"])){
+										$conexion = mysqli_connect("localhost", "root", "", "troyanos");
+										if (mysqli_connect_errno($conexion)) {
+											echo "Fallo al conectar a MySQL: " . mysqli_connect_error();
+										}
+										// En caso que la conexion sea exitosa, se mete al programa
+										else{
+											/*$consulta=$_POST["consulta"];
+											$resultado = mysqli_query($conexion, "SELECT * FROM todo WHERE id_animal=".$consulta.";");
+											$fila= mysqli_fetch_assoc($resultado);
+												print_r ($fila);
+											*/
+											$consulta=$_POST["consulta"];
+											$resultado = mysqli_query($conexion, "SELECT * FROM todo WHERE species='".$consulta."';");
+											$fila= mysqli_fetch_assoc($resultado);
+											/*$consulta=$_POST["consulta"];
+											$resultado = mysqli_query($conexion, "SELECT * FROM todo WHERE genus='".$consulta."';");
+											$fila= mysqli_fetch_assoc($resultado);*/
+											echo "<table>
+												<tr>
+													<th>Id</th>									 															
+													<th>Kingdom</th>
+													<th>Phylum</th>
+													<th>Class</th>
+													<th>Order</th>
+													<th>Family</th>
+													<th></th>
+													<th>Genus</th>
+													<th>Species</th>
+													<th>Subspecies</th>
+													<th>Scientific</th>
+													<th>Name</th>
+													<th>Author</th>
+													<th>Rank</th>
+													<th>Listing	</th>
+													<th>Party</th>
+													<th>Listed under</th>
+													<th>Full note</th>
+													<th># Full note</th>
+													<th>All_DistributionFullNames</th>
+													<th>All_DistributionISOCodes</th>
+													<th>NativeDistributionFullNames</th>
+													<th>Introduced_Distribution</th>
+													<th>Introduced(?)_Distribution</th>
+													<th>Reintroduced_Distribution</th>
+													<th>Extinct_Distribution</th>
+													<th>Extinct(?)_Distribution</th>
+													<th>Distribution_Uncertain</th>
+												</tr>";
+											while ($fila){
+												echo "<tr>";
+												foreach($fila as $campo)
+													echo "<td>".$campo."</td>";
+												$fila= mysqli_fetch_assoc($resultado);
+												echo "</tr><br/>";
+											}
+											echo "</table>";
+										}
+									}
+					echo    "	</div>
 							</div>
 						</div>
 						<br/>
@@ -181,12 +226,12 @@
 							<div class='col s12 l6'>
 								<h5 class='white-text'>¿Te interesa saber más?</h5>
 								<ul>
-									<li><a class='grey-text text-lighten-3' href='#!'>Link 1</a></li>
-									<li><a class='grey-text text-lighten-3' href='#!'>Link 2</a></li>
-									<li><a class='grey-text text-lighten-3' href='!'>Link 3</a></li>
-									<li><a class='grey-text text-lighten-3' href='!'>Link 4</a></li>
+									<li><a class='grey-text text-lighten-3' href=''>Link 1</a></li>
+									<li><a class='grey-text text-lighten-3' href=''>Link 2</a></li>
+									<li><a class='grey-text text-lighten-3' href=''>Link 3</a></li>
+									<li><a class='grey-text text-lighten-3' href=''>Link 4</a></li>
 								</ul>
-								<!--Boton de créditos-->;
+								<!--Boton de créditos-->
 								<a class='waves-effect waves-light btn' onclick=$('.tap-target') .tapTarget('open')>Créditos</a>
 							</div>
 							<!--Créditos-->
