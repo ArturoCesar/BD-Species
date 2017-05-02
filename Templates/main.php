@@ -222,7 +222,9 @@
 					</html>";
 				else {
 					SESSION_start();
-					$_SESSION["usuario_id"]=$cuenta;
+					$_SESSION["id"]=$cuenta;
+					$_SESSION["nombre"]=$consulta["usuario_nombre"];
+					$_SESSION["permiso"]=$consulta["usuario_permiso"];
 					//SESSION_destroy();
 					if ($consulta["usuario_permiso"]==0)
 						header("Location: ../Templates/admin.php");
