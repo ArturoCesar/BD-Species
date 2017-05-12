@@ -68,8 +68,8 @@
 											/*$consulta=$_POST["consulta"];
 											$resultado = mysqli_query($conexion, "SELECT * FROM todo WHERE genus='".$consulta."';");
 											$fila= mysqli_fetch_assoc($resultado);*/
-											echo "<table>
-												<tr>
+											echo "<table width='500'>
+												<thead><tr>
 													<th>Id</th>									 															
 													<th>Kingdom</th>
 													<th>Phylum</th>
@@ -98,13 +98,13 @@
 													<th>Extinct_Distribution</th>
 													<th>Extinct(?)_Distribution</th>
 													<th>Distribution_Uncertain</th>
-												</tr>";
+												</tr></thead>";
 											while ($fila){
-												echo "<tr>";
+												echo "<tbody><tr>";
 												foreach($fila as $campo)
 													echo "<td>".$campo."</td>";
 												$fila= mysqli_fetch_assoc($resultado);
-												echo "</tr><br/>";
+												echo "</tr></tbody><br/>";
 											}
 											echo "</table>";
 										}
